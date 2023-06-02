@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-//import{useState,useEffect}from 'react'
+import{useState,useEffect}from 'react'
 import {signOut,signIn,useSession,getProvider} from 'next-auth/react'
 
 const Nav = () => {
@@ -25,6 +25,18 @@ const Nav = () => {
          <div className="flex gap-3 md:gap-5">
           <Link href="/create-prompts" className='black_btn'>
              Create Post
+          </Link>
+          <button type="button" onClick={signOut} class="outline_btn">
+            SingOut
+          </button>
+          <Link href="/profile">
+          <Image
+          src='/assets/icons/profile_avatar.png'
+          alt='logo'
+          width={30}
+          height={30}
+          className='object-contain'
+        />
           </Link>
          </div>
         ):(
