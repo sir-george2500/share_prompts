@@ -5,19 +5,19 @@ import{useState,useEffect}from 'react'
 import {signOut,signIn,useSession,getProviders} from 'next-auth/react'
 
 const Nav = () => {
-   const isUserLoggedIn = true;
 
-   const [provider,setProvider] = useState(null);
+  const { data:session } = useSession();
+   const [providers,setProviders] = useState(null);
 
    const [toggleDropDown,setToggleDropDown]=useState(false);
 
    useEffect(()=>{
-    const setProviders = async ()=>{
+    const setUpProviders = async ()=>{
       const response = await getProviders();
 
       setProviders(response)
     }
-    setProviders();
+    setUpProviders();
    },[])
   return (
     <nav className="flex-between w-full mb-16 pt-3">
@@ -34,7 +34,7 @@ const Nav = () => {
       </Link>
        {/* Desk top Navigation */}
        <div className="sm:flex hidden">
-        {isUserLoggedIn ?(
+        {session?.user ?(
          <div className="flex gap-3 md:gap-5">
           <Link href="/create-prompts" className='black_btn'>
              Create Post
@@ -55,7 +55,7 @@ const Nav = () => {
         ):(
          <>
          {
-          provider && Object.
+          providers && Object.
           values(providers).
           map((provider) => (
             <button 
@@ -72,7 +72,7 @@ const Nav = () => {
        </div>
      {/* Mobile Navigation*/}
      <div className="sm:hidden flex relative">
-     {isUserLoggedIn ?(
+     {session?.user ?(
          <div className="flex ">
           <Link href="/">
               <Image
@@ -116,7 +116,7 @@ const Nav = () => {
         ):(
          <>
          {
-          provider && Object.
+          providers && Object.
           values(providers).
           map((provider) => (
             <button 
