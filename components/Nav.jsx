@@ -76,7 +76,7 @@ const Nav = () => {
          <div className="flex ">
           <Link href="/">
               <Image
-              src='/assets/icons/profile_avatar.png'
+              src={session?.user.image}
               width={30}
               height={30}
               className='object-contain' 
