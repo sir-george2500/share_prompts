@@ -2,51 +2,44 @@ import NextAuth from "next-auth";
 import GoogleProvider from 'next-auth/providers/google'
 import { connectToDB } from "@utils/database";
 import User from '@models/user';
- 
+
+// Establish database connection
+connectToDB();
 
 const handler = NextAuth({
-    providers:[
+    providers: [
         GoogleProvider({
-            clientId:process.env.GOOGLE_ID,
-            clientSecret:process.env.GOOGLE_CLIENT_SECRET
+            clientId: process.env.GOOGLE_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET
         })
     ],
-    //session
-    async session({session}){
-      const sessionUser = await User.findOne({
-        email: session.user.email
-      })
 
-      session.user.id = sessionUser.id.toString();
+    // Session callback
+    async session({ session }) {
+        const sessionUser = await User.findOne({
+            email: session.user.email
+        })
 
-      return session;
+        session.user.id = sessionUser.id.toString();
+
+        return session;
     },
 
-    async signIn({ profile }){
+    // Sign-in callback
+    async signIn({ profile }) {
+        // Check if a user already exists
+        const userExists = await User.findOne({
+            email: profile.email
+        });
 
-        try {
-
-         await connectToDB();
-         // check if a user already exists
-
-         const userExists = await User.findOne({
-            email:profile.email
-         });
-
-         if(!userExists){
+        if (!userExists) {
             await User.create({
-                email:profile.email,
-                username:profile.name.replace(" ","").toLowerCase(),
-                image:profile.picture
-            })
-         }
-
-            
-        } catch (error) {
-            
+                email: profile.email,
+                username: profile.name.replace(" ", "").toLowerCase(),
+                image: profile.picture
+            });
         }
-
     }
-})
+});
 
-export { handler as GET , handler as POST };
+export { handler as GET, handler as POST };
