@@ -7,39 +7,38 @@ import User from '@models/user';
 connectToDB();
 
 const handler = NextAuth({
-    providers: [
-        GoogleProvider({
-            clientId: process.env.GOOGLE_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
-        })
-    ],
+  providers: [
+    GoogleProvider({
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET
+    })
+  ],
 
-    // Session callback
-    async session({ session }) {
-        const sessionUser = await User.findOne({
-            email: session.user.email
-        })
+  // Optional: Define additional callbacks
+  callbacks: {
+    async signIn({ profile, email, account }) {
+      // Check if a user already exists
+      const userExists = await User.findOne({ email: profile.email });
 
-        session.user.id = sessionUser.id.toString();
+      if (!userExists) {
+        await User.create({
+          email: profile.email,
+          username: profile.name.replace(" ", "").toLowerCase(),
+          image: profile.picture
+        });
+      }
 
-        return session;
+      return true; // Allow sign in
     },
 
-    // Sign-in callback
-    async signIn({ profile }) {
-        // Check if a user already exists
-        const userExists = await User.findOne({
-            email: profile.email
-        });
+    async session({ session, user }) {
+      const sessionUser = await User.findOne({ email: user.email });
 
-        if (!userExists) {
-            await User.create({
-                email: profile.email,
-                username: profile.name.replace(" ", "").toLowerCase(),
-                image: profile.picture
-            });
-        }
+      session.user.id = sessionUser.id.toString();
+
+      return session;
     }
+  }
 });
 
 export { handler as GET, handler as POST };

@@ -1,25 +1,21 @@
-import {Schema,model,models} from 'mongoose';
+import { Schema, model, models } from 'mongoose';
 
+console.log("About to send the data ")
 const UserSchema = new Schema({
-    email:{
-        type:String,
-        unique:[true,'Email already exists!'],
-        required:[true ,'Email is required!'],
-    },
-    username:{
-        type:String,
-        required:[true,'Username is required!'],
-        match:[/^(?=.{8,20}$)(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z0-9]{8,20}$/,
-        "Username invalie , it should contain 8-20 alphanumeric letters and be unique!"]
-
-    },
-    image:{
-        type:String,
-    }
+  email: {
+    type: String,
+    unique: [true, 'Email already exists!'],
+    required: [true, 'Email is required!'],
+  },
+  username: {
+    type: String,
+    required: [true, 'Username is required!'],
+  },
+  image: {
+    type: String,
+  },
 });
-
-const User = models.User || model("User" , UserSchema);
-
-
+console.log("data gone")
+const User = models.User || model('User', UserSchema);
 
 export default User;
