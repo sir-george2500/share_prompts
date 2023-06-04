@@ -5,7 +5,10 @@ import User from '@models/user';
 
 // Establish database connection
 connectToDB();
-
+/**
+ * this module is charge with the responsibility of handling the 
+ * providers and authentication flow
+ */
 const handler = NextAuth({
   providers: [
     GoogleProvider({
@@ -37,10 +40,11 @@ const handler = NextAuth({
           image: profile.picture,
         });
       }
-
-      return true; // Allow sign in
+      // Allow sign in
+      return true; 
     },
   },
 });
 
+// export it
 export { handler as GET, handler as POST };
