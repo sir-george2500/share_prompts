@@ -14,7 +14,7 @@ const Home = () => {
 
     {/* This is the user Feed */}
 
-    <Feed/>
+    <Feed />
    </section>
   )
 }
