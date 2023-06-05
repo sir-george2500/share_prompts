@@ -34,7 +34,7 @@ const Form = ({
         <input
          value={post.tag}
          onChange={(e) => setPost({
-          ...post,prompt:e.target.value
+          ...post,tag:e.target.value
          })}
          placeholder='#tag'
          required
