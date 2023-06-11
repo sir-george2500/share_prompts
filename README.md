@@ -1,4 +1,4 @@
-##NEXT JS Challenge completed build and deployed a fullStack Application with NEXTJS React official Framework
+# NEXT JS Challenge completed build and deployed a fullStack Application with NEXTJS React official Framework
 
 ![AI Prompt Sharing](https://i.ibb.co/9pQNZZy/Thumbnail-27.png)
 
