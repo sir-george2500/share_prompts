@@ -79,7 +79,7 @@ const Nav = () => {
               src={session?.user.image}
               width={30}
               height={30}
-              className='object-contain' 
+              className='object-contain rounded-full' 
               alt="profile"
               onClick={()=> setToggleDropDown((prev) =>!prev)}
             />
