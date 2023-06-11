@@ -1,8 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#NEXT JS Challenge completed build and deployed a fullStack Application with NEXTJS React official Framework
 
-## Getting Started
+![AI Prompt Sharing](https://i.ibb.co/9pQNZZy/Thumbnail-27.png)
 
 First, run the development server:
+
+Install the dependencies
+```bash
+npm install 
+```
 
 ```bash
 npm run dev
