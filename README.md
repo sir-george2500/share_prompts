@@ -7,7 +7,7 @@ to setup this project
 I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
 I also designed a user-friendly interface to encourage prompt sharing and discovery.
 
-Feel free to explore the deployed application at [share prompt] [https://share-prompts-lovat.vercel.app/]!
+Feel free to explore the deployed application at [share prompt](https://share-prompts-lovat.vercel.app/)!
 
 
 To set this project locally  you can follow the instruction below
