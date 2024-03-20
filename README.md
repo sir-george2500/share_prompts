@@ -1,6 +1,16 @@
-# NEXT JS Challenge completed build and deployed a fullStack Application with NEXTJS React official Framework
+ # Share Prompt - AI Prompt Sharing Platform
 
-![AI Prompt Sharing](https://i.ibb.co/9pQNZZy/Thumbnail-27.png)
+Share Prompt is a web application that allows users to share and discover creative AI prompts.
+This project is a great example of building a full-stack application using Next.js.
+to setup this project
+
+I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
+I also designed a user-friendly interface to encourage prompt sharing and discovery.
+
+Feel free to explore the deployed application at [https://share-prompts-lovat.vercel.app/]!
+
+
+To set this project locally  you can follow the instruction below
 
 First, run the development server:
 
@@ -8,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Install the dependencies
 ```bash
-npm install 
+npm install
 ```
 
 ```bash
