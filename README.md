@@ -7,7 +7,7 @@ to setup this project
 I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
 I also designed a user-friendly interface to encourage prompt sharing and discovery.
 
-Feel free to explore the deployed application at [https://share-prompts-lovat.vercel.app/]!
+Feel free to explore the deployed application at [share prompt] [https://share-prompts-lovat.vercel.app/]!
 
 
 To set this project locally  you can follow the instruction below
@@ -42,4 +42,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the  [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
