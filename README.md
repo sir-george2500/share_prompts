@@ -1,7 +1,6 @@
  # Share Prompt - AI Prompt Sharing Platform
 
 Share Prompt is a web application that allows users to share and discover creative AI prompts.
-to setup this project
 
 I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
 I also designed a user-friendly interface to encourage prompt sharing and discovery.
