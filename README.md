@@ -5,6 +5,13 @@ Share Prompt is a web application that allows users to share and discover creati
 I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
 I also designed a user-friendly interface to encourage prompt sharing and discovery.
 
+This is project was design with the Following Technologies 
+
+- Next JS
+- Mongo DB
+- Varcel for Deployment
+  
+
 Feel free to explore the deployed application at [share prompt](https://share-prompts-lovat.vercel.app/)!
 
 
