@@ -41,7 +41,7 @@ Successfully built the Landing page for the project.
 - Mongo DB
 - Varcel for Deployment
 
-# ODM (Object Data Model)
+#### ODM (Object Data Model)
 Mongoose
   
 
