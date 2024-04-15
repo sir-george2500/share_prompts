@@ -19,10 +19,12 @@ One of the most significant non-technical challenges faced was deciding on the a
 
 When it came to selecting a database, my initial inclination was towards SQL due to my familiarity with it from my studies with ALX. However, considering the constraints of budget and resources available to me, I had to reassess my options. I realized that my application didn't require intricate relational structures. If simplicity in querying and handling large volumes of data was the priority, then NoSQL seemed like the ideal solution. After weighing the options, MongoDB emerged as the best fit for my needs. While I did consider Firebase, its serverless nature imposed constraints on development that didn't align with our requirements, prompting me to opt for MongoDB. Additionally, cost considerations also favored MongoDB over Firebase, which appeared to be comparatively expensive.
 
+### Current Feature and Implementation 
+
 I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
 I also designed a user-friendly interface to encourage prompt sharing and discovery.
 
-This is project was design with the Following Technologies 
+### This is project was design with the Following Technologies 
 
 - Next JS
 - Mongo DB
