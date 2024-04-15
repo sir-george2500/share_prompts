@@ -1,13 +1,18 @@
  # Share Prompt - AI Prompt Sharing Platform
+![A photo of share prompt](https://cdn.hashnode.com/res/hashnode/image/upload/v1712578451474/3170c807-a378-4f0c-a7ed-ced7afe6b4da.png)
+
+## Project Introduction and Story line 
 
 The emergence of Generative AI marks a remarkable milestone in human achievement. However, its potential may seem wasted if one doesn't know how to utilize the technology effectively to enhance productivity. A friend of mine recently experienced this dilemma when he purchased credits on a platform, hoping to use AI prompts to generate high-quality content efficiently. He needed the AI to craft a write-up that didn't obviously appear to be machine-generated but rather reflected his own voice. Despite his efforts, he found himself burning through his limited credits without much success.
 
 Observing his struggle, I offered to assist by refining the prompt. With a better-crafted input, the machine executed the task flawlessly. This experience sparked a realization: How many others might be facing similar challenges? What if we could share our successful prompts? It occurred to me that many prompts we struggle to formulate have likely been perfected by others. The solution was to create a platform where users can share effective AI prompts, enabling individuals to leverage collective expertise and optimize their AI interactions**. Share Prompt** was born.
 
 
+### What is Share Prompt
 
 Share Prompt is a web application that allows users to share and discover creative AI prompts.
 
+### The choice of Tech Stack 
 As with any project destined for success and longevity, it all boils down to design and planning. And that planning begins with the crucial step of selecting the right technology stack to build your project.
 
 One of the most significant non-technical challenges faced was deciding on the appropriate tech stack for the project. Initially, I considered using FastAPI with Python or Flask, as these were familiar frameworks from my previous experience and aligned with the roadmap set by the project requirements. However, given the need for rapid development and integration of OAuth authentication, I had to reconsider my approach. Ultimately, I opted for Next.js, the official React framework, which offered a more expedient path to meeting the MVP deadline.
