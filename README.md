@@ -21,14 +21,28 @@ When it came to selecting a database, my initial inclination was towards SQL due
 
 ### Current Feature and Implementation 
 
-I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
-I also designed a user-friendly interface to encourage prompt sharing and discovery.
+- I implemented the search functionality using Next JS, allowing users to find prompts efficiently.
+- I also designed a user-friendly interface to encourage prompt sharing and discovery.
+Successfully built the Landing page for the project.
+
+- Implemented functionality for users to upload their prompts.
+
+- Integrated Google OAuth for user authentication.
+
+- Implemented features for users to update and delete their prompts.
+
+- Allow other user to copy user prompt
+
+- Build the search bar to help user search  prompts
 
 ### This is project was design with the Following Technologies 
 
 - Next JS
 - Mongo DB
 - Varcel for Deployment
+
+# ODM (Object Data Model)
+Mongoose
   
 
 Feel free to explore the deployed application at [share prompt](https://share-prompts-lovat.vercel.app/)!
